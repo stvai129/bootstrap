@@ -1,0 +1,27 @@
+*
+.blade_container{
+   width:180px;
+   height:180px;
+   margin:auto;
+   margin-top:50px;
+   animation: blade 1s linear infinite;
+
+}
+@keyframes blade{
+   0%{transform:rotate(360deg);} 
+}
+
+  .rode{
+     width:15px; 
+     height:150px;
+     background-color:black;
+     margin:auto;
+     margin-top:0px;
+  }
+  .stand{
+     width:100px;
+     height:15px;
+     background-color:black;
+     margin:auto;
+  }
+

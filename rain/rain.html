@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html long="an">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-UA-compatible" content="ie=edge">
+	<title>Colorful Rain | Javascript</title>
+	<link rel="stylesheet" href="css/rain.css">
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+		<div class="sticky-md-top">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		  <div class="container-fluid">
+		    <a class="navbar-brand" class="sticky-md-top" href="../bootstrap.html">BOOTSTRAP</a>
+		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+		        <li class="nav-item">
+		          <a class="nav-link active" aria-current="page" href="../bootstrap.html">Home</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="../rain/rain.html">Link</a>
+		        </li>
+		        <li class="nav-item dropdown">
+		          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		            Dropdown
+		          </a>
+		          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+		            <li><a class="dropdown-item" href="../fan/fan.html">Action</a></li>
+		            <li><a class="dropdown-item" href="../Glowing dots animation/animation.html">Another action</a></li>
+		            <li><hr class="dropdown-divider"></li>
+		            <li><a class="dropdown-item" href="../animation5-round/animation5_round.html">Something else here</a></li>
+		          </ul>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link disabled">Disabled</a>
+		        </li>
+		      </ul>
+		      <form class="d-flex">
+		        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+		        <button class="btn btn-outline-success" type="submit">Search</button>
+		      </form>
+		    </div>
+		  </div>
+		</div>
+		</nav>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+   <script>
+     function rain() {
+      let amount = 200;
+      let body = document.querySelector('body');
+      let i = 0;
+      while(i < amount){             let drop = document.createElement('i');
+
+        let size = Math.random() * 5;
+        let posX = Math.floor(Math.random() * window.innerWidth);
+        let delay = Math.random()  *  -20;
+        let duration = Math.random()  *  5;
+
+        drop.style.width = 0.2 + size+ 'px';
+        drop.style.left = posX + 'px';
+        drop.style.animationDelay = delay + 's';
+        drop.style.animationDuration = 1 + duration + 's';
+      	body.appendChild(drop);
+      	i++
+      }
+    }
+
+    rain();
+    </script>
+  </body>
+  </html>
